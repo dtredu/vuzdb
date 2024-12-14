@@ -1,0 +1,26 @@
+diff --git a/ghostscript/__init__.py b/ghostscript/__init__.py
+index ad5a53c..7582077 100644
+--- a/ghostscript/__init__.py
++++ b/ghostscript/__init__.py
+@@ -30,7 +30,7 @@ __all__ = ['Ghostscript', 'revision',
+ 
+ import sys # :todo: remove, debugging only
+ from . import _gsprint as gs
+-__version__ = gs.__version__
++__version__ = "0.7"
+ 
+ GhostscriptError = gs.GhostscriptError
+ 
+diff --git a/ghostscript/_gsprint.py b/ghostscript/_gsprint.py
+index 210ed20..8191f39 100644
+--- a/ghostscript/_gsprint.py
++++ b/ghostscript/_gsprint.py
+@@ -521,7 +521,7 @@ if sys.platform == 'win32':
+     libgs = windll.LoadLibrary(libgs)
+ else:
+     try:
+-        libgs = cdll.LoadLibrary("libgs.so")
++        libgs = cdll.LoadLibrary("@libgs@")
+     except OSError:
+         # shared object file not found
+         import ctypes.util
