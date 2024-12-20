@@ -66,12 +66,20 @@
             #    ];
             #  }))
             #]))
+            beautifulsoup4
+            lxml
+            toml
+            tqdm
             requests
             camelot
             (callPackage ./python-ghostscript.nix {})
             ghostscript
+            pdfminer
+            pdfplumber
+            parallel
             #tabula-py
             ##tabula-java
+            go
           ];
         };
       }
