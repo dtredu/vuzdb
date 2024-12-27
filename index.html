@@ -12,13 +12,28 @@
     <script src="./app.js" type="module"></script>
   </head>
   <body>
-    <div class="container">
+    <div id="page-search" style="display: none;" class="container">
       <h1 class="title">Поиск по вузам</h1>
       <input id="search-bar" type="text" class="search-bar" placeholder="Search...">
       <div class="results">
-          <h2>Results:</h2>
-          <ul class="results-list">
-              <li class="result-item">Result 1</li>
+          <!--<h2>Results:</h2> -->
+          <ul id="search-results-discipline-names" class="results-list">
+          </ul>
+      </div>
+    </div>
+    <div id="page-discipline" style="display: none;" class="container">
+      <h1 class="title" id="d-title">Название дисциплины</h1>
+      <div class="results">
+          <!--<h2>Results:</h2> -->
+          <ul id="search-results-discipline-programs" class="results-list">
+          </ul>
+      </div>
+    </div>
+    <div id="page-program" style="display: none;" class="container">
+      <h1 class="title" id='p-title'> Название программы</h1>
+      <div class="results">
+          <!--<h2>Results:</h2> -->
+          <ul id="search-results-program-plans" class="results-list">
           </ul>
       </div>
     </div>
